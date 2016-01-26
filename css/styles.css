@@ -1,0 +1,139 @@
+/*Reguli de stilizare pentru diferite elemente HTML*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #e4e7ec;
+  padding-top: 70px;
+}
+.navbar {
+	background-color: #fff;
+	border: 0;
+	box-shadow: 0 8px 17px rgba(0, 0, 0, .2);
+}
+.navbar-default .navbar-brand {
+	background-color: #9c9c9c;
+	color: #fff;
+	font-weight: bold;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active {
+  color: #fff;
+  background-color: #C4C4C4;
+}
+.nav .navbar-nav > ul > li {
+  color: #9c9c9c;
+}
+.nav .navbar-nav > ul > li:hover {
+  color: #000;
+}
+#active {
+	color: #000;
+}
+.panel, .modal-content, .alert {
+  border-color: #cfd9D7;
+  border-radius: 2px;
+  box-shadow: 0 8px 17px rgba(0, 0, 0, .2);
+}
+.panel-default > .panel-heading {
+  text-align: center;
+  font-size: 140%;
+  font-weight: bold;
+  color: #444;
+  background-color: #f6f6f6;
+  border-color: #cfd9db;
+}
+.center-form {
+  width: 430px;
+  margin: 12% auto;
+}
+.btn {
+  font-weight: bold;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+.btn-success {
+  background-color: #0f9d58;
+}
+.btn-success:hover {
+  background-color: #196c4a;
+}
+.btn-primary {
+  background-color: #4285f4;
+}
+.btn-primary:hover {
+  background-color: #3367d6;
+}
+.btn-lg {
+  font-size: 14px;
+}
+.btn-file {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  margin-left: 5%;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+.form-control {
+  border-radius: 0;
+}
+.invite-btn, .invite-email {
+  margin-top: 2%;
+  width: 239px;
+  display: none;
+  text-align: center;
+}
+.invite-span {
+  margin-top: 2%;
+  width: 239px;
+  text-align: center;
+}
+.invite-span, .invite-btn {
+  margin-bottom: 3%;
+}
+.btnUp, .btnDwn {
+    width: 117.5px;
+}
+.btnEdit, .btnDelete {
+  margin-top: 1%;
+  width: 98px;
+}
+.dropdown {
+  margin-top: 4%;
+}
+.vezi-evenimente {
+  margin-top: 2%;
+  width: 200px;
+}
+.modal {
+  margin-top: 10%;
+}
+#wysiwyg {
+  margin: 0 4%;
+}
+#picture-name {
+  margin-left: 1%;
+}
+#title-input, #title-input-label, #image-input-label, .help-block, #select-input, #select-input-label {
+  width: 350px;
+  margin-left: 5%;
+}
+#process-submit {
+  margin-left: 4%;
+}
+#title-error, #image-error, #select-error {
+  margin-left: 5%;
+}
