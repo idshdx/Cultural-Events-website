@@ -2,7 +2,7 @@
 require "config/db-connect.cfg.php";
 
 $form_data = array();
-//Validarea formei de delete, in cazurile specificate. Ajax call-ul va fi va avea success=false; In caz cotrar, trimite obiectul JSON pentru ajax call
+//Validarea formei de delete, in cazurile specificate. In cazul  succes-ului, trimite obiectul JSON pentru ajax call
 if (empty($_POST['action']) || empty($_POST['action_type']) || empty($_POST['action_id'])) {
     $form_data['success'] = false;
 } else {
