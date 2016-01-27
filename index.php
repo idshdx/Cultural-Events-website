@@ -20,15 +20,15 @@ include "includes/header.inc.php";
 					<?php
 						//Umplem pagina cu date provenite din baza de date
 		                $qry = "SELECT * FROM categories"; //Selectam tot din tabelul 'categories'
-		                $qry_result = mysqli_query($dbc, $qry); //Rulam query-ul. Prima variabila e conexiunea la baza de date, a doua query-ul specificat mai sus.
+		                $qry_result = mysqli_query($dbc, $qry); //Rulam query-ul. Prima variabila e conexiunea la baza de date, a doua query-ul specificat mai sus stocat in variabila $qry.
 		                $i = 0; $hr = '';
 		                while ($row = mysqli_fetch_array($qry_result)) { // Treci prin fiecare element intors de query: mysqli_fetch_array: Rezultatele query-ului intoarse sunt de tipul array.
-		                	$i++;
-		                	if($i % 2 == 0)
+		                	$i++;										//$row(variabila va retine datele din fiecare coloana din tabelul categories=>Ex. row["id"]=>id-ul categoriei, row["text"]=> textul categoriei )
+		                	if($i % 2 == 0)								//Accesand itemele din array, populam pagina
 		                		$hr = '<div class="col-md-12"></div>'; //Work-Around pentru incadrare in pagina
 		                	else
-		                		$hr = ''; //In caz ca numarul de categorii este impar adauga clasa bootstrap col-md-6 (diviziunea ocupa jumatate  din div-ul parinte.In cazul de fata, jumatate de pagina)
-		                    echo ' 
+		                		$hr = ''; //In caz ca numarul de categorii este impar adauga clasa bootstrap col-md-6 (diviziunea ocupa jumatate  din div-ul parinte(latime).In cazul de fata, jumatate de pagina).Col-md-12 ocupa tot width-ul. Ai informatii pe net
+		                    echo '  
 			                    <div class="col-md-6 object-container">
 			                    	<form name="event_'.str_replace(" ","_",strtolower($row["category"])).'" action="events.php" method="post">
 				                    	<input type="hidden" name="event" value="'.$row["id"].'">

@@ -1,4 +1,4 @@
-<!-- Pagina proceseaza forma de invite, valideaza input-ul si ofera functionalitatea de mail -->
+ <!-- Pagina proceseaza forma de invite, valideaza input-ul si ofera functionalitatea de mail -->
 <?php
 
 $errors = array();
@@ -31,7 +31,7 @@ if (empty($_POST['email'])) {
         $form_data['sent'] = 'Eveniment trimis';
     }
 }
-//Toate datele formei sunt transformate intr un obiect JSON(pentru a fi manipulate de Javascript)
+//Toate datele formei sunt transformate intr un obiect JSON
 echo json_encode($form_data);
 
 ?>

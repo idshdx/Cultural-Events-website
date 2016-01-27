@@ -8,12 +8,13 @@ $( document ).ready(function() {
     	$(this).next().show();
     	$(this).prev().slideDown('fast');
     });
-    //Javascript pentru a prelua ID-ul evenimentul(localStorage este specific HTML5)
+    //Javascript pentru a testa daca s a votat(Datele sunt retinute in browser). (localstorage tine de HTML5) 
     var btnsToDisable = $('form').filter(function(){
         var event_id = $(this).children('input[name=event_id]').val();
         return localStorage.getItem('vote' + event_id) == event_id;
     });
-    btnsToDisable.find('.btnUp, .btnDwn').attr('disabled', true);
+    btnsToDisable.find('.btnUp, .btnDwn').attr('disabled', true); //Dupa ce ai votat o data, dezactiveaza butoanele ca sa nu mai poti vota
+
     //Javascript pentru a functionalitatea de invite
     $('.send-event').submit(function(event) {
         var self = $(this);
@@ -26,7 +27,7 @@ $( document ).ready(function() {
             'event'    : self.find('input[name=event]').val(),
             'text'     : self.find('input[name=text]').val()
         };
-        //Se face un ajax call cu datele din forma
+        //Se face un ajax call cu datele din forma spre invite.php
         $.ajax({
             type      : 'POST',
             url       : 'invite.php',
@@ -75,7 +76,7 @@ $( document ).ready(function() {
                 'btn_value'    : 'down'
             };
         }
-
+        //Ajax call pentru functionalitatea de votat
         $.ajax({
             type      : 'POST',
             url       : 'vote.php',

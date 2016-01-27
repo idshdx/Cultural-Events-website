@@ -11,13 +11,13 @@ if(isset($_POST['event']))
     $qry = "SELECT * FROM events WHERE categories_id = ". $event_page;
     $qry_result = mysqli_query($dbc, $qry);
     while ($row = mysqli_fetch_array($qry_result)) {
-    	$event = ucwords($row["event"]);
+    	$event = ucwords($row["event"]);  //Nu mai este folosita in forma row['event'](ca in index.php)pentru ca s a atribuit unei variabile($event) si asta e folosita. Dar e acelasi lucru.
     	$image = $row["image"];
     	$text = $row["text"];
     	$event_id = $row["id"];
         echo '
         	<div class="panel panel-default object-container">
-				<div class="panel-heading">'.$event.'</div>
+				<div class="panel-heading">'.$event.'</div> 
 				<div class="panel-body">
 					<div class="row">
 						<div class="col-md-12">
